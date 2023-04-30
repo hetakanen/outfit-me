@@ -16,6 +16,9 @@ const typeDefinitions = /* GraphQL */ `
     hello: String!,
     clothing: Clothing!
   }
+  type Mutation {
+    postClothing( photoUrl: String!,  type: Type!): Clothing!
+  }
 `
 const defaultClothing = { id: 123456, photoUrl: "/test", type: "SHIRT" };
 
@@ -28,6 +31,15 @@ const resolvers = {
     id: (parent) => parent.id,
     photoUrl: (parent) => parent.photoUrl,
     type: (parent) => parent.type
+  },
+  Mutation: {
+    postClothing: (parent, args) => {
+      return {
+        id: Date.now(),
+        photoUrl: args.photoUrl,
+        type: args.type
+      }
+    }
   }
 }
 
