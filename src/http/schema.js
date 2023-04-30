@@ -35,4 +35,24 @@ export default new GraphQLSchema({
             },
         },
     }),
+
+    mutation: new GraphQLObjectType({
+        name: 'Mutation',
+        fields: {
+            createClothing: {
+                type: Clothing,
+                args: {
+                    photoUrl: { type: GraphQLString },
+                    type: { type: Type }
+                },
+                resolve: (parent, args) => {
+                    return {
+                        id: Date.now(),
+                        photoUrl: args.photoUrl,
+                        type: args.type
+                    }
+                },
+            },
+        },
+    }),
 });
