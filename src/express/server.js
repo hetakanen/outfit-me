@@ -16,6 +16,13 @@ app.use('/graphql', graphqlHTTP({
             return { "id": 123456, "photoUrl": "/test", "type": "SHIRT" }
         }, hello: () => {
             return "test"
+        },
+        createClothing: ({ photoUrl, type }) => {
+            return {
+                id: Date.now(),
+                photoUrl: photoUrl,
+                type: type
+            }
         }
     },
     graphiql: true

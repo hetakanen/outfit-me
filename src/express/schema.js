@@ -11,4 +11,8 @@ export default buildSchema(`
         clothing: Clothing
         hello: String
     }
+
+    type Mutation {
+        createClothing( photoUrl: String!,  type: String!): Clothing!
+    }
 `)
