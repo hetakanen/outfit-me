@@ -17,7 +17,7 @@ const typeDefinitions = /* GraphQL */ `
     clothing: Clothing!
   }
   type Mutation {
-    postClothing( photoUrl: String!,  type: Type!): Clothing!
+    createClothing( photoUrl: String!,  type: Type!): Clothing!
   }
 `
 const defaultClothing = { id: 123456, photoUrl: "/test", type: "SHIRT" };
@@ -33,7 +33,7 @@ const resolvers = {
     type: (parent) => parent.type
   },
   Mutation: {
-    postClothing: (parent, args) => {
+    createClothing: (parent, args) => {
       return {
         id: Date.now(),
         photoUrl: args.photoUrl,
