@@ -30,7 +30,7 @@ export default new GraphQLSchema({
             clothing: {
                 type: Clothing,
                 resolve: () => {
-                    return { "id": 123456, "photoUrl": "/test", "type": 0 }
+                    return { "id": 123456, "photoUrl": "01.jpg", "type": 0 }
                 },
             },
         },

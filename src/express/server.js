@@ -15,7 +15,7 @@ app.use('/graphql', graphqlHTTP({
     schema,
     rootValue: {
         clothing: () => {
-            return { "id": 123456, "photoUrl": "/test", "type": "SHIRT" }
+            return { "id": 123456, "photoUrl": "01.jpg", "type": "SHIRT" }
         }, hello: () => {
             return "test"
         },

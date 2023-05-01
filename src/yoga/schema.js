@@ -20,7 +20,7 @@ const typeDefinitions = /* GraphQL */ `
     createClothing( photoUrl: String!,  type: Type!): Clothing!
   }
 `
-const defaultClothing = { id: 123456, photoUrl: "/test", type: "SHIRT" };
+const defaultClothing = { id: 123456, photoUrl: "01.jpg", type: "SHIRT" };
 
 const resolvers = {
   Query: {
