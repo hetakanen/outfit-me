@@ -1,10 +1,12 @@
 import express from 'express'
 import schema from './schema.js';
 import { graphqlHTTP } from 'express-graphql'
+import cors from 'cors';
 
-const app = express()
-const port = 3000
+const app = express();
+const port = 3000;
 
+app.use(cors());
 app.get('/', (req, res) => {
     res.send('Hello World!')
 })
