@@ -5,7 +5,7 @@ import { createClothing, getClothing } from './api'
 interface Clothing {
   id: string;
   photoUrl: string;
-  type: 'SHIRT' | 'TOP' | 'BOTTOM';
+  type: 'SHIRT' | 'TOP' | 'BOTTOM' | 'SOCKS';
 }
 
 function App() {
