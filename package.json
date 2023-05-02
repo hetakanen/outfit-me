@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"vite\" \"nodemon src/yoga/server.js\"",
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server-yoga\"",
     "dev:client": "vite",
-    "dev:server-express": "nodemon src/express/server.js",
-    "dev:server-http": "nodemon src/http/server.js",
-    "dev:server-yoga": "nodemon src/yoga/server.js",
+    "dev:server-express": "nodemon src/server/express/server.js",
+    "dev:server-http": "nodemon src/server/http/server.js",
+    "dev:server-yoga": "nodemon src/server/yoga/server.js",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
