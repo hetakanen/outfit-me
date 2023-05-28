@@ -9,10 +9,12 @@
     "dev:server-express": "nodemon src/server/express/server.js",
     "dev:server-http": "nodemon src/server/http/server.js",
     "dev:server-yoga": "nodemon src/server/yoga/server.js",
+    "dev:server-apollo": "nodemon src/server/apollo/server.js",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@apollo/server": "^4.7.1",
     "@graphql-tools/schema": "^9.0.19",
     "cors": "^2.8.5",
     "express": "^4.18.2",
